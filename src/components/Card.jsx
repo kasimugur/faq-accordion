@@ -1,11 +1,45 @@
-import { useState } from "react"
-import { text, iconMinus, iconPlus } from "../pages/page"
+import { useEffect, useState } from "react"
+import { text, iconMinus, iconPlus } from "../pages/page.jsx"
 
 export default function Card() {
   const [expanded, setExpanded] = useState(true)
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen1, setIsOpen1] = useState(false)
+  const [isOpen2, setIsOpen2] = useState(false)
+  const [isOpen3, setIsOpen3] = useState(false)
+  const [isOpen4, setIsOpen4] = useState(false)
 
-  
+  useEffect(() => {
+    if (isOpen1 === true) {
+      setIsOpen2(false);
+      setIsOpen3(false);
+      setIsOpen4(false);
+    }
+  }, [isOpen1])
+
+  useEffect(() => {
+    if (isOpen2 === true) {
+      setIsOpen3(false)
+      setIsOpen4(false)
+      setIsOpen1(false)
+    }
+  }, [isOpen2])
+
+  useEffect(() => {
+    if (isOpen3 === true) {
+      setIsOpen1(false)
+      setIsOpen2(false)
+      setIsOpen4(false)
+    }
+  }, [isOpen3])
+
+  useEffect(() => {
+    if (isOpen4 === true) {
+      setIsOpen1(false)
+      setIsOpen2(false)
+      setIsOpen3(false)
+    }
+  }, [isOpen4])
+
 
 
   return (
@@ -14,60 +48,60 @@ export default function Card() {
         <div className="acordion">
 
           <div className="acordion-item">
-            <div onClick={() => setIsOpen(!isOpen)} className="acordion-header">
+            <div onClick={() => setIsOpen1(!isOpen1)} className="acordion-header">
               <h2>
 
                 {text.titles.title1}
-                <button>{ isOpen ? iconPlus : iconMinus}
+                <button>{isOpen1 ? iconPlus : iconMinus}
                 </button>
 
               </h2>
             </div>
             <div className="acordion-body">
-              {expanded || isOpen ? text.contents.content1 : ''}
+              {isOpen1 ? text.contents.content1 : ''}
             </div>
           </div>
           <div className="acordion-item">
             <div
-            onClick={() => setIsOpen(!isOpen)}
-            className="acordion-header">
+              onClick={() => setIsOpen2(!isOpen2)}
+              className="acordion-header">
               <h2>
 
                 {text.titles.title2}
 
-                <button>{isOpen ? iconPlus : iconMinus}</button>
+                <button>{isOpen2 ? iconPlus : iconMinus}</button>
               </h2>
             </div>
             <div className="acordion-body">
-              {isOpen ? text.contents.content2 : ''}
+              {isOpen2 ? text.contents.content2 : ''}
             </div>
           </div>
           <div className="acordion-item">
             <div
-            onClick={() => setIsOpen(!isOpen)}
-            className="acordion-header">
+              onClick={() => setIsOpen3(!isOpen3)}
+              className="acordion-header">
               <h2>
 
                 {text.titles.title3}
-                <button>{isOpen ? iconPlus : iconMinus}</button>
+                <button>{isOpen3 ? iconPlus : iconMinus}</button>
               </h2>
             </div>
             <div className="acordion-body">
-              {isOpen ? text.contents.content3 :''}
+              {isOpen3 ? text.contents.content3 : ''}
             </div>
           </div>
           <div className="acordion-item">
             <div
-            onClick={() => setIsOpen(!isOpen)}
-            className="acordion-header">
+              onClick={() => setIsOpen4(!isOpen4)}
+              className="acordion-header">
               <h2>
 
                 {text.titles.title4}
-                <button>{isOpen ? iconPlus : iconMinus}</button>
+                <button>{isOpen4 ? iconPlus : iconMinus}</button>
               </h2>
             </div>
             <div className="acordion-body">
-              {isOpen ? text.contents.content4 : ''}
+              {isOpen4 ? text.contents.content4 : ''}
             </div>
           </div>
         </div>
