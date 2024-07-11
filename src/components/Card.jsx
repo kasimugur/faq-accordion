@@ -1,48 +1,74 @@
+import { useState } from "react"
+import { text, iconMinus, iconPlus } from "../pages/page"
+
 export default function Card() {
+  const [expanded, setExpanded] = useState(true)
+  const [isOpen, setIsOpen] = useState(false)
+
+  
+
+
   return (
     <>
       <div className="card">
-        <div className="acordion-item">
+        <div className="acordion">
 
-          <div className="acordion-header">
-            <h2>What is Frontend Mentor, and how will it help me?
-              <button></button>
-            </h2>
-          </div>
-          <div className="acordion-body">
-            Frontend Mentor offers realistic coding challenges to help developers improve their
-            frontend coding skills with projects in HTML, CSS, and JavaScript. It's suitable for
-            all levels and ideal for portfolio building.
-          </div>
-          <div className="acordion-header">
-            <h2>
-              Is Frontend Mentor free?
+          <div className="acordion-item">
+            <div onClick={() => setIsOpen(!isOpen)} className="acordion-header">
+              <h2>
 
-              <button></button>
-            </h2>
+                {text.titles.title1}
+                <button>{ isOpen ? iconPlus : iconMinus}
+                </button>
+
+              </h2>
+            </div>
+            <div className="acordion-body">
+              {expanded || isOpen ? text.contents.content1 : ''}
+            </div>
           </div>
-          <div className="acordion-body">
-            Yes, Frontend Mentor offers both free and premium coding challenges, with the free
-            option providing access to a range of projects suitable for all skill levels.
+          <div className="acordion-item">
+            <div
+            onClick={() => setIsOpen(!isOpen)}
+            className="acordion-header">
+              <h2>
+
+                {text.titles.title2}
+
+                <button>{isOpen ? iconPlus : iconMinus}</button>
+              </h2>
+            </div>
+            <div className="acordion-body">
+              {isOpen ? text.contents.content2 : ''}
+            </div>
           </div>
-          <div className="acordion-header">
-            <h2>
-              Can I use Frontend Mentor projects in my portfolio?
-              <button></button>
-            </h2>
+          <div className="acordion-item">
+            <div
+            onClick={() => setIsOpen(!isOpen)}
+            className="acordion-header">
+              <h2>
+
+                {text.titles.title3}
+                <button>{isOpen ? iconPlus : iconMinus}</button>
+              </h2>
+            </div>
+            <div className="acordion-body">
+              {isOpen ? text.contents.content3 :''}
+            </div>
           </div>
-          <div className="acordion-body">
-            Yes, you can use projects completed on Frontend Mentor in your portfolio. It's an excellent
-            way to showcase your skills to potential employers!
-          </div>
-          <div className="acordion-header">
-            <h2>
-              How can I get help if I'm stuck on a Frontend Mentor challenge?
-              <button></button>
-            </h2>
-          </div>
-          <div className="acordion-body">
-            How can I get help if I'm stuck on a Frontend Mentor challenge?
+          <div className="acordion-item">
+            <div
+            onClick={() => setIsOpen(!isOpen)}
+            className="acordion-header">
+              <h2>
+
+                {text.titles.title4}
+                <button>{isOpen ? iconPlus : iconMinus}</button>
+              </h2>
+            </div>
+            <div className="acordion-body">
+              {isOpen ? text.contents.content4 : ''}
+            </div>
           </div>
         </div>
       </div>
