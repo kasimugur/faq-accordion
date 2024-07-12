@@ -1,13 +1,15 @@
-import { useState } from 'react'
 import './App.css'
 import Card from './components/Card'
+import './css/style.css'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
+    <div className="App">
     <Card />
+
+    </div>
     </>
   )
 }
