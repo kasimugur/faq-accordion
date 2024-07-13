@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { text, iconMinus, iconPlus } from "../pages/page.jsx"
+import { text, iconMinus, iconPlus, iconStar } from "../pages/page.jsx"
 import '../css/style.css'
 export default function Card() {
   const [isOpen1, setIsOpen1] = useState(false)
@@ -40,18 +40,19 @@ export default function Card() {
   }, [isOpen4])
 
 
-
   return (
     <>
       <div className="card">
         <div className="acordion">
-
+  <div className="header">
+  <span>{iconStar} </span>  <h1>FAQs</h1>
+  </div>
           <div className="acordion-item">
             <div onClick={() => setIsOpen1(!isOpen1)} className="acordion-header">
               <h2>
 
                 {text.titles.title1}
-                <button>{isOpen1 ? iconPlus : iconMinus}
+                <button>{isOpen1 ? iconMinus : iconPlus}
                 </button>
 
               </h2>
@@ -68,7 +69,7 @@ export default function Card() {
 
                 {text.titles.title2}
 
-                <button>{isOpen2 ? iconPlus : iconMinus}</button>
+                <button>{isOpen2 ? iconMinus : iconPlus}</button>
               </h2>
             </div>
             <div className="acordion-body">
@@ -82,7 +83,7 @@ export default function Card() {
               <h2>
 
                 {text.titles.title3}
-                <button>{isOpen3 ? iconPlus : iconMinus}</button>
+                <button>{isOpen3 ? iconMinus : iconPlus}</button>
               </h2>
             </div>
             <div className="acordion-body">
@@ -96,7 +97,7 @@ export default function Card() {
               <h2>
 
                 {text.titles.title4}
-                <button>{isOpen4 ? iconPlus : iconMinus}</button>
+                <button>{isOpen4 ? iconMinus : iconPlus}</button>
               </h2>
             </div>
             <div className="acordion-body">

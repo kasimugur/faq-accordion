@@ -1,1 +1,44 @@
-/*# sourceMappingURL=style.css.map */
+.card {
+  display: flex;
+  height: 450px;
+  width: 450px;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 15px;
+  padding: 20px;
+  text-align: start;
+  box-shadow: 1px 0px 10px;
+}
+.card .acordion .header {
+  margin: 8px 0;
+  display: flex;
+}
+.card .acordion .header h1 {
+  margin-left: 10px;
+  font-weight: bold;
+}
+.card .acordion .acordion-item {
+  padding: 8px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+.card .acordion .acordion-item .acordion-header {
+  width: 100%;
+  border-bottom: 1px solid hsl(275, 100%, 97%);
+}
+.card .acordion .acordion-item .acordion-header h2 {
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  caret-color: #f00e0e;
+}
+.card .acordion .acordion-item .acordion-header h2:hover {
+  color: hsl(292, 16%, 49%);
+}
+.card .acordion .acordion-item .acordion-header h2 button {
+  border: none;
+  background-color: hsl(0, 0%, 100%);
+}
+.card .acordion .acordion-item .acordion-body {
+  color: rgba(88, 80, 80, 0.6666666667);
+}/*# sourceMappingURL=style.css.map */

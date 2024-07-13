@@ -6,13 +6,51 @@ $Font-size: 16px;
 $Mobile: 375px;
 $Desktop: 1440px;
 .card{
-  
+  display: flex;
+  height: 450px;
+  width: 450px;
+  background-color: $White;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: start;
+  box-shadow: 1px 0px 10px  ;
   .acordion{
-
+    .header{
+      margin: 8px 0;
+      display: flex;
+    
+      h1{
+        margin-left: 10px;
+        font-weight: bold;
+      }
+    }
+    
     .acordion-item{
+      padding: 8px;
+      margin-bottom: 20px;
+      width: 100%;
+      .acordion-header{
+        width: 100%;
+        border-bottom: 1px solid $Light-pink ;
+      h2{
+        font-size: 18px;
+        display: flex;
+        justify-content: space-between;
+        cursor: pointer;
+        caret-color: #f00e0e;                 
+        &:hover{
+          color: $Grayish-purple;
+        } 
+        button{
+          border: none;
+          background-color: $White;
+        }
+      }
 
-      .acordion-header{}
-      .acordion-body{}
+      }
+      .acordion-body{
+        color: #585050aa;
+      }
     }
   }
 }
