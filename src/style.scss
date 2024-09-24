@@ -14,7 +14,9 @@ $Desktop: 1440px;
   padding: 20px;
   text-align: start;
   box-shadow: 1px 0px 10px  ;
+  
   .acordion{
+    transition: all 0.3s ease-in-out;
     .header{
       margin: 8px 0;
       display: flex;
@@ -26,10 +28,12 @@ $Desktop: 1440px;
     }
     
     .acordion-item{
+      transition: all 0.3s ease-in-out;
       padding: 8px;
       margin-bottom: 20px;
       width: 100%;
       .acordion-header{
+        transition: all 0.3s ease-in-out;
         width: 100%;
         border-bottom: 1px solid $Light-pink ;
       h2{
@@ -44,12 +48,19 @@ $Desktop: 1440px;
         button{
           border: none;
           background-color: $White;
+        &:hover{
+          transform: scale(1.1);
         }
+        transition: all 0.3s ease-in;
+        }
+      
       }
 
       }
       .acordion-body{
+        transition:all 0.3s ease-in;
         color: #585050aa;
+       
       }
     }
   }

@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react"
 import { text, iconMinus, iconPlus, iconStar } from "../pages/page.jsx"
-import '../css/style.css'
 export default function Card() {
   const [isOpen1, setIsOpen1] = useState(false)
   const [isOpen2, setIsOpen2] = useState(false)

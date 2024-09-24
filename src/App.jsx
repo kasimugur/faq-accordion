@@ -1,6 +1,6 @@
 import './App.css'
 import Card from './components/Card'
-import './css/style.css'
+import './style.scss'
 
 function App() {
 
@@ -8,7 +8,6 @@ function App() {
     <>
     <div className="App">
     <Card />
-
     </div>
     </>
   )
