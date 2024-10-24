@@ -43,9 +43,9 @@ export default function Card() {
     <>
       <div className="card">
         <div className="acordion">
-  <div className="header">
-  <span>{iconStar} </span>  <h1>FAQs</h1>
-  </div>
+          <div className="header">
+            <span>{iconStar} </span>  <h1>FAQs</h1>
+          </div>
           <div className="acordion-item">
             <div onClick={() => setIsOpen1(!isOpen1)} className="acordion-header">
               <h2>
